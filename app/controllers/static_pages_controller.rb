@@ -2,4 +2,8 @@
 
 class StaticPagesController < ApplicationController
   def home; end
+
+  def kawasaki
+    
+  end
 end

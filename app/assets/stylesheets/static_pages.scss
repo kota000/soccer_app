@@ -1,3 +1,19 @@
-// Place all the styles related to the StaticPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+.main-container {
+  background: image-url('background.jpg');
+  background-size:cover;
+  background-color:rgba(255,255,255,0.1);
+  background-blend-mode:lighten;
+}
+
+.title {
+  text-align: center;
+  padding: 50px;
+}
+
+.teamImg {
+  height: 160px;
+  width: 180px;
+}
+
