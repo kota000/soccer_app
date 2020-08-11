@@ -1,5 +1,5 @@
 <% flash.each do |key, value| %>
-  <div class="alert alert-dark alert-<%= bootstrap_alert(key)%> close-flash">
+  <div class="flash alert-<%= bootstrap_alert(key)%> close-flash">
     <%= value %>
     <button type="button" class="close close-button" data-dismiss="alert">
       &times;
