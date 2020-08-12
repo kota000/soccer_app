@@ -40,3 +40,19 @@ p {
 .flash {
   padding: 10px;
 }
+
+// devise
+.loginBox {
+  border: 1px #ccc solid;
+  box-shadow: 0 2px 3px 0 #ddd;
+  padding: 30px;
+  margin-top: 70px;
+  background: #ddd;
+}
+
+.backimg {
+  background: image-url('background.jpg');
+  background-size:cover;
+  background-blend-mode:lighten;
+  height: 1000px;
+}
