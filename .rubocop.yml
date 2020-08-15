@@ -14,4 +14,4 @@ AllCops:
     - 'lib/tasks/*'
     - 'vendor/**/*'
     - 'path/ruby'
-
+    - 'controller/*'
