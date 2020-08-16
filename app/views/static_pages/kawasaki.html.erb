@@ -1,2 +1,8 @@
 <% provide(:title, '川崎フロンターレ') %>
 <h1>川崎フロンターレ</h1>
+<%= render 'shared/post_form' %>
+<%#= image_tag @posts %>
+<div class="col-md-8">
+  <h3>Micropost Feed</h3>
+  <%= render 'shared/feed' %>
+</div>
