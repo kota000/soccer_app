@@ -15,4 +15,4 @@ AllCops:
     - 'vendor/**/*'
     - 'path/ruby'
     - 'controller/*'
-    - 'uploaders/*'
+    - 'uploaders'

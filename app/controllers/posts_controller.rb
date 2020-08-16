@@ -5,9 +5,13 @@ class PostsController < ApplicationController
       flash[:success] = "Micropost created!"
       redirect_to root_url
     else
-      @feed_items = []
+      # @feed_items = []
       render 'static_pages/home'
     end
+  end
+
+  def show
+    @post = Post.find(params[:id])
   end
 
   def destroy
@@ -15,7 +19,7 @@ class PostsController < ApplicationController
 
   private
 
-    def post_params
-      params.require(:post).permit(:content)
-    end
+  def post_params
+    params.require(:post).permit(:content)
+  end
 end
