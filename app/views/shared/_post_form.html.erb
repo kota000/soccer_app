@@ -1,8 +1,11 @@
 <% if user_signed_in? %>
   <%= form_for(@post) do |f| %>
+    <span class="picture">
+      <%= f.file_field :picture %>
+    </span>
     <div class="field">
-      <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+      <%= f.text_area :content, class: "text_area", placeholder: "Compose new micropost..." %>
     </div>
-    <%= f.submit "Post", class: "btn btn-primary" %>
+    <%= f.submit "投稿する", class: "btn btn-primary" %>
   <% end %>
 <% end %>

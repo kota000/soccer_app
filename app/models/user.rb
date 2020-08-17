@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   mount_uploader :image, ImageUploader
 
-  def feed
-    Post.where("user_id = ?", id)
-  end
+  # def feed
+  #   Post.where("user_id = ?", id)
+  # end
 end

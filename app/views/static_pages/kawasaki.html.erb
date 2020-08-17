@@ -1,11 +1,26 @@
 <% provide(:title, '川崎フロンターレ') %>
-<h1>川崎フロンターレ</h1>
-<%= render 'shared/post_form' %>
-<% @posts.each do |aa| %>
-  <p><%= link_to aa.content, aa %></p>
-<% end %>
 
-<%# <div class="col-md-8">
-  <h3>Micropost Feed</h3> %>
-  <%#= render 'shared/feed' %>
-<%# </div> %>
+<div class="blue">
+  <div class="container">
+    <h1 class="page_title">川崎フロンターレ</h1>
+    <div class="create_btn">
+      <%= render 'create_post' %>
+    </div>
+    <div class="row">
+      <% @posts.each do |aa| %>
+        <div class="col-lg-3 col-md-4 col-xs-12">
+          <div class="cards">
+            <%= link_to aa do %>
+              <%= image_tag 'frontale.jpg', class: "teamImg" %>
+              <%# if aa.first.image.attached? %>
+              <p><%#= image_tag aa.image %></p>
+              <%# end %>
+              <p><%= aa.content %></p>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

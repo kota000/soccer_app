@@ -2,8 +2,8 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      flash[:success] = "Micropost created!"
-      redirect_to root_url
+      flash[:info] = "Micropost created!"
+      redirect_to request.referrer
     else
       # @feed_items = []
       render 'static_pages/home'
@@ -20,6 +20,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:content)
+    params.require(:post).permit(:content, :image)
   end
 end
