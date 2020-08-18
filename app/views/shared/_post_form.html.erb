@@ -6,6 +6,7 @@
     <div class="field">
       <%= f.text_area :content, class: "text_area", placeholder: "Compose new micropost..." %>
     </div>
+    <%= f.hidden_field :teamname, value: yield(:title) %>
     <%= f.submit "投稿する", class: "btn btn-primary" %>
   <% end %>
 <% end %>
