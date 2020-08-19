@@ -1,27 +1,11 @@
-<% provide(:title, '川崎フロンターレ') %>
+<% provide(:title, "川崎フロンターレ") %>
 
 <div class="blue">
   <div class="container">
     <h1 class="page_title">川崎フロンターレ</h1>
     <div class="create_btn">
-      <%= render 'create_post' %>
+      <%= render "create_post" %>
     </div>
-    <div class="row text-center">
-      <% @posts.each do |aa| %>
-        <div class="col-lg-3 col-md-4 col-xs-12">
-          <div class="cards">
-            <%= link_to aa do %>
-              <% if aa.image? %>
-                <%= image_tag aa.image.url, class: "teamImg" %>
-              <% else %>
-                <%= image_tag 'frontale.jpg', class: "teamImg" %>
-              <% end %>
-              <p><%= aa.content %></p>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
-    </div>
+    <%= render "shared/posts", posts: @posts %>
   </div>
 </div>
-
