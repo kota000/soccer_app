@@ -59,6 +59,8 @@ class StaticPagesController < ApplicationController
   def yokohamafc
   end
 
+  def all
+  end
   private
 
   def create_post
