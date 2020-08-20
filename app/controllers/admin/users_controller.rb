@@ -5,10 +5,6 @@ class Admin::UsersController < ApplicationController
     @users = User.all
   end
 
-  def destroy
-
-  end
-
   def show
     @user = User.find(params[:id])
   end
@@ -18,4 +14,5 @@ class Admin::UsersController < ApplicationController
   def if_not_admin
     redirect_to root_path unless current_user.admin?
   end
+
 end
