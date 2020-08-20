@@ -1,0 +1,11 @@
+<% provide(:title, "横浜FM") %>
+
+<div class="blue">
+  <div class="container">
+    <h1 class="page_title">横浜FM</h1>
+    <div class="create_btn">
+      <%= render "create_post" %>
+    </div>
+    <%= render "shared/posts", posts: @posts %>
+  </div>
+</div>

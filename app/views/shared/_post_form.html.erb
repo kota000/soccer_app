@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <%= form_for(@post) do |f| %>
+  <%= form_for(post) do |f| %>
     <span class="picture">
       <%= f.file_field :image %>
     </span>
