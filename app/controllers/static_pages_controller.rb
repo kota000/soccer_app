@@ -64,7 +64,7 @@ class StaticPagesController < ApplicationController
   private
 
   def create_post
-    @posts = Post.all
+    @posts = Post.paginate(page: params[:page], per_page: 12)
     @post = current_user.posts.build if user_signed_in?
     if user_signed_in?
       @post = current_user.posts.build

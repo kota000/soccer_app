@@ -5,7 +5,6 @@ class PostsController < ApplicationController
       flash[:info] = "Micropost created!"
       redirect_to request.referrer
     else
-      # @feed_items = []
       render 'static_pages/home'
     end
   end
