@@ -20,6 +20,12 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @posts = Post.all
+    #Viewのformで取得したパラメータをモデルに渡す
+    # @posts = Post.search(params[:search])
+  end
+
   private
 
   def post_params
