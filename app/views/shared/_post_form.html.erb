@@ -4,9 +4,12 @@
       <%= f.file_field :image %>
     </span>
     <div class="field">
-      <%= f.text_area :content, class: "text_area", placeholder: "Compose new micropost..." %>
+      <%= f.text_area :content, class: "text_area", placeholder: "Up to 40 characters..." %>
     </div>
     <%= f.hidden_field :teamname, value: yield(:title) %>
     <%= f.submit "投稿する", class: "btn btn-primary" %>
   <% end %>
+<% else %>
+  <h2>ログインをしてください</h2>
+  <%= button_to "ログイン", new_user_session_path, class: "btn btn-success" %>
 <% end %>
