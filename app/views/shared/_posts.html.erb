@@ -7,7 +7,7 @@
             <% if post.image? %>
               <%= image_tag post.image.url, class: "teamImg" %>
             <% else %>
-              <%= image_tag 'frontale.jpg', class: "teamImg" %>
+                <%= image_tag ("#{action_name}.jpg"), class: "teamImg" %>
             <% end %>
             <p class="content"><%= post.content %></p>
           <% end %>
