@@ -9,7 +9,7 @@
         <%= submit_tag 'Search', :name => nil, class: " btn-success" %>
       <% end %>
     </div>
-    <h4 class="text-right"><%= @posts.count %>件</h4>
+    <h4 class="text-right"><%= @posts.size %>件</h4>
     <%= render "shared/posts", posts: @posts %>
   </div>
 </div>

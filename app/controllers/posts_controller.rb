@@ -22,8 +22,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.paginate(page: params[:page], per_page: 12).search(params[:search])
-    #Viewのformで取得したパラメータをモデルに渡す
-    # @posts = Post.search(params[:search])
   end
 
   private
