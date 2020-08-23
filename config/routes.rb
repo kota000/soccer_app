@@ -21,7 +21,6 @@ Rails.application.routes.draw do
   get '/shounann',   to: 'static_pages#shounann'
   get '/yokohamafc', to: 'static_pages#yokohamafc'
   get '/all',        to: 'static_pages#all'
-  get '/search',     to: 'posts#search'
 
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
