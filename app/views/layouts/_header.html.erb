@@ -8,14 +8,14 @@
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav ml-auto mr-sm-2 mt-2 mt-lg-0">
-        <li class="nav-item active mr-3">
+        <li class="nav-item mr-3">
           <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
         <li class="nav-item mr-3">
           <%= link_to "Login", user_session_path, class: "nav-link" unless user_signed_in? %>
         </li>
         <li class="nav-item mr-3">
-          <a class="nav-link" href="#">Search</a>
+          <%= link_to "Search", search_path, class: "nav-link" %>
         </li>
       </ul>
       <% if user_signed_in? %>
