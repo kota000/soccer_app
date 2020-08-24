@@ -61,6 +61,7 @@ class StaticPagesController < ApplicationController
 
   def all
   end
+
   private
 
   def create_post
