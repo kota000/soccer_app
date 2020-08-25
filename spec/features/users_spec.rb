@@ -55,5 +55,22 @@ RSpec.describe 'users', type: :feature do
         expect(User.count).to eq 0
       end
     end
+
+    context '管理者アカウントではないとできない' do
+      before do
+        @user = create(:user)
+        click_on 'Login'
+        fill_in 'user[email]', with: @user.email
+        fill_in 'user[password]', with: @user.password
+        click_on 'Log in'
+      end
+
+      it 'user一覧・詳細ページは開けない' do
+        visit users_path
+        expect(current_path).to eq root_path
+        visit users_path
+        expect(current_path).to eq root_path
+      end
+    end
   end
 end
