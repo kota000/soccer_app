@@ -4,4 +4,12 @@ class Post < ApplicationRecord
   mount_uploader :image, ImageUploader
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 40 }
+
+  def self.search(search)
+    if search
+      where(['content LIKE ?', "%#{search}%"])
+    else
+      all
+    end
+  end
 end

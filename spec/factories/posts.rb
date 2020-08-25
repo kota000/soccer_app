@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :post do
-    content { "MyText" }
-    image { "MyString" }
-    user { nil }
+    content { "Hello" }
+    teamname { "ooita" }
+    association :user
   end
 end

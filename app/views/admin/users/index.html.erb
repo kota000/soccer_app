@@ -6,8 +6,7 @@
     <li>
       <%= user.id %>:
       <%= link_to user.username, user %>
-      <%= link_to "　delete", user, method: :delete,
-                                      data: { confirm: "Are you sure?" } %>
+      <%= link_to "delete", user, method: :delete, data: { confirm: "Are you sure?" } %>
     </li>
   <% end %>
 </ul>

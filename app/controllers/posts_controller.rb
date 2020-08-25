@@ -20,6 +20,10 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def index
+    @posts = Post.paginate(page: params[:page], per_page: 12).search(params[:search])
+  end
+
   private
 
   def post_params

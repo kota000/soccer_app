@@ -6,7 +6,7 @@
     <div class="field">
       <%= f.text_area :content, class: "text_area", placeholder: "Up to 40 characters..." %>
     </div>
-    <%= f.hidden_field :teamname, value: yield(:title) %>
+    <%= f.hidden_field :teamname, value: action_name %>
     <%= f.submit "投稿する", class: "btn btn-primary" %>
   <% end %>
 <% else %>

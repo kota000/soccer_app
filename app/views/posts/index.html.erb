@@ -1,0 +1,15 @@
+<% provide(:title, "検索") %>
+
+<div class="blue">
+  <div class="container">
+    <h1 class="page_title">All posts</h1>
+    <div class="search">
+      <%= form_tag(posts_path, :method => 'get' ) do %>
+        <%= text_field_tag :search,'', id: 'search_word' %>
+        <%= submit_tag 'search', :name => nil, class: " btn-success" %>
+      <% end %>
+    </div>
+    <h4 class="text-right"><%= @posts.size %>件</h4>
+    <%= render "shared/posts", posts: @posts %>
+  </div>
+</div>
