@@ -1,6 +1,29 @@
-<h1>コメント</h1>
 <%= @post.content %>
-<%= image_tag @post.image.url, class: "teamImg" if @post.image?%>
+<%#= image_tag @post.image.url, class: "teamImg" if @post.image?%>
+
+<h2>コメント一覧</h2>
+<% if @comments.present? %>
+<% @comments.each do |comment| %>
+  <div>
+    <%= comment.content %>
+    <hr>
+  </div>
+<% end %>
+<% end %>
+<% if user_signed_in? %>
+  <%= form_for [@post, @comment] do |f| %>
+    <%= f.text_field :content %>
+    <br>
+    <%= f.submit 'コメントする' %>
+  <% end %>
+<% end %>
+
+
+
+
+
+
+
 <% if user_signed_in? && @post.user.id == current_user.id %>
   <p><%= link_to "削除", @post, data: { confirm: "Are you sure?" }, method: :delete %></p>
 <% end %>
