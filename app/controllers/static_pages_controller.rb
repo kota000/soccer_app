@@ -2,7 +2,7 @@
 
 class StaticPagesController < ApplicationController
   before_action :create_post, except: [:home]
-  
+
   def home
   end
 
