@@ -21,15 +21,12 @@
 //   margin-bottom: 30px;
 //   text-align: center;
 // }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-// h2 {
-//   font-size: 1.2em;
-//   letter-spacing: -1px;
-//   margin-bottom: 30px;
-//   text-align: center;
-//   font-weight: normal;
-//   color: white;
-// }
 
 p {
   font-size: 1.1em;
@@ -37,6 +34,9 @@ p {
   color: black;
 }
 
+footer {
+  margin-top: auto;
+}
 .flash {
   padding: 10px;
 }
