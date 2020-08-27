@@ -1,8 +1,9 @@
 <% provide(:title, "検索") %>
 
 <div class="blue">
+  <h1 class="page_title">All posts</h1>
   <div class="container">
-    <h1 class="page_title">All posts</h1>
+
     <div class="search">
       <%= form_tag(posts_path, :method => 'get' ) do %>
         <%= text_field_tag :search,'', id: 'search_word' %>
