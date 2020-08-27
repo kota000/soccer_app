@@ -8,7 +8,7 @@
       <% end %>
       <%= i+1 %>.  <%= comment.user.username %>
       <p class="comment_content"><%= comment.content %></p>
-      <p class="time"><%= comment[:created_at].strftime("%Y-%m-%d%H:%M") %></p><hr>
+      <p class="time"><%= comment[:created_at].to_s(:datetime_jp) %></p><hr>
     </div>
   <% end %>
 <% end %>
