@@ -1,26 +1,7 @@
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
-/* universal */
-// section {
-//   overflow: auto;
-// }
-
-// textarea {
-//   resize: vertical;
-// }
-
-// /* typography */
-
-// h1, h2, h3, h4, h5, h6 {
-//   line-height: 1;
-// }
-
-// h1 {
-//   font-size: 3em;
-//   letter-spacing: -2px;
-//   margin-bottom: 30px;
-//   text-align: center;
-// }
 body {
   display: flex;
   flex-direction: column;
@@ -69,4 +50,3 @@ footer {
   background-blend-mode: lighten;
   height: 1000px;
 }
-
