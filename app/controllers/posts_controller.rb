@@ -4,7 +4,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to request.referrer, notice: 'Micropost created!'
     else
-      render 'static_pages/home'
+      redirect_to request.referrer, notice: '投稿することができませんでした。'
     end
   end
 
