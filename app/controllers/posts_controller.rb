@@ -2,10 +2,9 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      flash[:info] = "Micropost created!"
-      redirect_to request.referrer
+      redirect_to request.referrer, notice: 'Micropost created!'
     else
-      render 'static_pages/home'
+      redirect_to request.referrer, notice: '投稿することができませんでした。'
     end
   end
 
@@ -18,8 +17,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    flash.now[:success] = "投稿を削除しました。"
-    redirect_to root_path
+    redirect_to root_path, notice: '投稿を削除しました。'
   end
 
   def index

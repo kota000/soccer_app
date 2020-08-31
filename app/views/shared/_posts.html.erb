@@ -1,7 +1,8 @@
 <div class="row text-center">
-  <% posts.each do |post| %>
+  <% posts.each_with_index do |post, i| %>
     <% if post.teamname == action_name || current_page?(posts_path) %>
       <div class="col-lg-3 col-md-4 col-xs-12">
+      <% POSTS_COUNT << i %>
         <div class="cards">
           <%= link_to post do %>
             <% if post.image? %>
@@ -16,4 +17,7 @@
     <% end %>
   <% end %>
 </div>
-<div class="pagenate"><%= will_paginate posts %></div>
+<% if POSTS_COUNT.size >2 %>
+<div class="pagenate"><%= will_paginate @posts %></div>
+<% end %>
+<%#= @post.total_count %>

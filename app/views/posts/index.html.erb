@@ -3,14 +3,14 @@
 <div class="blue">
   <h1 class="page_title">All posts</h1>
   <div class="container">
-
     <div class="search">
       <%= form_tag(posts_path, :method => 'get' ) do %>
         <%= text_field_tag :search,'', id: 'search_word' %>
         <%= submit_tag 'search', :name => nil, class: " btn-success" %>
       <% end %>
     </div>
-    <h4 class="text-right"><%= @posts.size %>件</h4>
+    <h4 class="text-right"><%= @posts.count %>件</h4>
     <%= render "shared/posts", posts: @posts %>
   </div>
+  <div class="pagenate"><%= will_paginate @posts %></div>
 </div>

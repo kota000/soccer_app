@@ -6,9 +6,8 @@
       <% else %>
         <%= image_tag ("nouser.jpeg"), class: "icon_image" %>
       <% end %>
-      <%= i+1 %>.  <%= comment.user.username %>
-      <p class="comment_content"><%= comment.content %></p>
-      <p class="time"><%= comment[:created_at].to_s(:datetime_jp) %></p><hr>
+      <%= i+1 %>.<%= comment.user.username %>:<span class="time"><%= comment[:created_at].to_s(:datetime_jp) %></span>
+      <p class="comment_content"><%= comment.content %></p><hr>
     </div>
   <% end %>
 <% end %>
