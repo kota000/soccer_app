@@ -1,5 +1,5 @@
 <div class="row text-center">
-  <% posts.each do |post| %>
+  <% posts.each_with_index do |post, i| %>
     <% if post.teamname == action_name || current_page?(posts_path) %>
       <div class="col-lg-3 col-md-4 col-xs-12">
         <div class="cards">
