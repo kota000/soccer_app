@@ -1,2 +1,2 @@
 APP_TITLE = 'Soccer fun'
-POSTS_COUNT = []
+MAX_POSTS_COUNT = 100
