@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @comments = @post.comments
+    @comments = @post.comments.paginate(page: params[:page], per_page: COMMENT_PAGINATION_COUNT)
     @comment = @post.comments.build
   end
 
@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.paginate(page: params[:page], per_page: 12).search(params[:search])
+    @posts = Post.paginate(page: params[:page], per_page: POSTS_PAGINATION_COUNT).search(params[:search])
   end
 
   private

@@ -6,7 +6,7 @@
     <div class="search">
       <%= form_tag(posts_path, :method => 'get' ) do %>
         <%= text_field_tag :search,'', id: 'search_word' %>
-        <%= submit_tag 'search', :name => nil, class: " btn-success" %>
+        <%= submit_tag 'search', :name => nil, class: "btn-success" %>
       <% end %>
     </div>
     <h4 class="text-right"><%= @posts.count %>件</h4>
