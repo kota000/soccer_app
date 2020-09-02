@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @comments = @post.comments.paginate(page: params[:page], per_page: COMMENT_PAGINATION_COUNT)
+    @comments = @post.comments.paginate(page: params[:page], per_page: COMMENT_PAGINATION_COUNT).includes(user: :comments)
     @comment = @post.comments.build
   end
 

@@ -44,11 +44,10 @@ RSpec.describe 'comments', type: :feature do
         end
       end
 
-      it 'コメントの文字数が100を超える場合' do
-        fill_in 'comment[content]', with: "a" * 101
+      it 'コメントの文字数が200を超える場合' do
+        fill_in 'comment[content]', with: "a" * 201
         click_on 'コメントする'
         expect(page).to have_content 'コメントを作成できませんでした'
-        expect(page).not_to have_content "a" * 101
       end
 
       it 'コメントの文字数が0の場合' do

@@ -14,7 +14,7 @@
       <% @posts.each_with_index do |post, i| %>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="cards">
-            <div class="post_time"><%= time_ago_in_words(post.created_at) %></div>
+            <div class="post_time"><%= time_ago_in_words(post.created_at) %>前</div>
             <%= link_to post do %>
               <% if post.image? %>
                 <%= image_tag post.image.url, class: "teamImg" %>

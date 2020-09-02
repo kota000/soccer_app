@@ -42,7 +42,7 @@ RSpec.describe 'users', type: :feature do
         fill_in 'user[username]', with: 'hoge'
         click_on 'Update'
         expect(current_path).to eq root_path
-        expect(page).to have_content 'Your account has been updated successfully.'
+        expect(page).to have_content 'アカウント情報を変更しました。'
         expect(page).to have_content 'hoge'
       end
 
