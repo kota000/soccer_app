@@ -21,7 +21,7 @@ RSpec.describe 'users', type: :feature do
       end
     end
 
-    context 'ログインをする' do
+    context 'ログインをしたあとのUser機能' do
       before do
         @user = create(:user)
         click_on 'Login'

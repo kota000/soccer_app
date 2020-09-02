@@ -7,27 +7,53 @@ RSpec.describe 'comments', type: :feature do
       @comment = create(:comment)
     end
 
-    context 'コメント画面' do
-      it 'コメントが表示されているか' do
+    context 'コメント画面表示' do
+      it 'ログインをしているとき' do
+        click_on 'Login'
+        click_on 'ゲストログイン'
+        expect(current_path).to eq root_path
+        click_on '大分トリニータ'
+        click_on 'Hello'
+        expect(page).not_to have_content 'ログインをしてください'
+      end
+
+      it 'コメントが表示されているか(ログインしていないとき)' do
         click_on '大分トリニータ'
         click_on 'Hello'
         expect(page).to have_content 'Test Content'
         expect(page).to have_content @comment.user.username
         expect(page).to have_content 'ログインをしてください'
-        expect(page).not_to have_content 'コメントする'
-
       end
+    end
 
-      it 'ログインをしているとき' do
-        click_on 'Login'
-        fill_in 'user[email]', with: @comment.user.email
-        fill_in 'user[password]', with: "000000"
-        click_on 'Log in'
-        expect(current_path).to eq root_path
+    context 'コメントの作成' do
+      before do
+        visit user_session_path
+        click_on 'ゲストログイン'
         click_on '大分トリニータ'
         click_on 'Hello'
-        # expect(page).to have_content 'コメントする'
-        expect(page).not_to have_content 'ログインをしてください'
+      end
+
+      it 'コメントを作成できるか' do
+        fill_in 'comment[content]', with: "aaaaa"
+        click_on 'コメントする'
+        expect(page).to have_content "コメントを投稿しました"
+        within '.comment' do
+          expect(page).to have_content "ゲストユーザー"
+          expect(page).to have_content "aaaaa"
+        end
+      end
+
+      it 'コメントの文字数が100を超える場合' do
+        fill_in 'comment[content]', with: "a" * 101
+        click_on 'コメントする'
+        expect(page).to have_content 'コメントを作成できませんでした'
+        expect(page).not_to have_content "a" * 101
+      end
+
+      it 'コメントの文字数が0の場合' do
+        click_on 'コメントする'
+        expect(page).to have_content 'コメントを作成できませんでした'
       end
     end
   end
