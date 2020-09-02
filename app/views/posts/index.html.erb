@@ -12,15 +12,16 @@
     <h4 class="text-right"><%= @posts.count %>件</h4>
     <div class="row text-center">
       <% @posts.each_with_index do |post, i| %>
-        <div class="col-lg-3 col-md-4 col-xs-12">
+        <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="cards">
+            <div class="post_time"><%= time_ago_in_words(post.created_at) %></div>
             <%= link_to post do %>
               <% if post.image? %>
                 <%= image_tag post.image.url, class: "teamImg" %>
               <% else %>
                 <%= image_tag ("#{post.teamname}.jpg"), class: "teamImg" %>
               <% end %>
-              <p class="content"><%= post.content %></p>
+              <p class="content"><%= post.content.truncate(26) %></p>
             <% end %>
           </div>
         </div>

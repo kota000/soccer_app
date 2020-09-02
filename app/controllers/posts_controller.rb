@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.paginate(page: params[:page], per_page: POSTS_PAGINATION_COUNT).search(params[:search])
+    @posts = Post.paginate(page: params[:page], per_page: POSTS_PAGINATION_COUNT).search(params[:search]).order(created_at: :desc)
   end
 
   private

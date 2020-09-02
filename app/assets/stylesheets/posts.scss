@@ -7,6 +7,7 @@ $breakpoints: (
 
 .content {
   font-size: 15px;
+  text-align: center;
 }
 
 .page_title {
@@ -25,4 +26,10 @@ $breakpoints: (
 .post_img {
   height: 160px;
   width: 250px;
+}
+
+.post_time {
+  font-size: 10px;
+  text-align: center;
+  color: blueviolet;
 }
