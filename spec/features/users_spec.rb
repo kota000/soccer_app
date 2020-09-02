@@ -39,20 +39,20 @@ RSpec.describe 'users', type: :feature do
       it '名前を編集する' do
         expect(page).to have_content 'test_user'
         click_on 'Edit'
-        fill_in 'user[username]', with: 'test'
-        fill_in 'user[current_password]', with: @user.password
+        fill_in 'user[username]', with: 'hoge'
         click_on 'Update'
         expect(current_path).to eq root_path
         expect(page).to have_content 'Your account has been updated successfully.'
-        expect(page).to have_content 'test'
+        expect(page).to have_content 'hoge'
       end
 
       it 'アカウントを削除する' do
         expect(User.count).to eq 1
         click_on 'Edit'
-        expect(page).to have_content 'Cancel my account'
         click_on 'Cancel my account'
         expect(User.count).to eq 0
+        expect(current_path).to eq root_path
+        expect(page).to have_content 'Login'
       end
     end
 
