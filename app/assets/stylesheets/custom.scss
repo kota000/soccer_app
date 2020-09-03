@@ -14,7 +14,6 @@ footer {
 
 p {
   font-size: 1.1em;
-  // line-height: 1.7em;
   color: black;
 }
 
@@ -26,6 +25,12 @@ p {
   margin: 0 auto;
   padding-bottom: 5px;
   width: 170px;
+}
+
+#logo {
+  color: white;
+  text-decoration: none;
+  font-family: 'Lora', serif;
 }
 // devise
 .loginBox {
@@ -49,4 +54,16 @@ p {
   background-size: cover;
   background-blend-mode: lighten;
   height: 1000px;
+}
+
+.teamImg {
+  height: 160px;
+  width: 180px;
+}
+
+@media (max-width: 575.98px) {
+.teamImg {
+  height: 200px;
+  width: 280px;
+}
 }

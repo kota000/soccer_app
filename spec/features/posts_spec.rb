@@ -19,18 +19,10 @@ RSpec.describe 'posts', type: :feature do
         click_on '湘南ベルマーレ'
         expect(page).not_to have_content 'Hello'
       end
-    end
-
-    context 'postの作成' do
-      before do
-        @user = create(:user)
-      end
 
       it 'ログインしているときだけpost作成フォームが表示される' do
-        click_on 'Login'
-        fill_in 'user[email]', with: @user.email
-        fill_in 'user[password]', with: @user.password
-        click_on 'Log in'
+        visit user_session_path
+        click_on 'ゲストログイン'
         click_on '川崎フロンターレ'
         click_on '新規投稿する'
         expect(page).not_to have_content 'ログインをしてください'
@@ -40,6 +32,65 @@ RSpec.describe 'posts', type: :feature do
         click_on '川崎フロンターレ'
         click_on '新規投稿する'
         expect(page).to have_content 'ログインをしてください'
+      end
+    end
+
+    context 'postの作成' do
+      before do
+        visit user_session_path
+        click_on 'ゲストログイン'
+      end
+
+      it 'postを作成できるか' do
+        click_on '湘南ベルマーレ'
+        click_on '新規投稿する'
+        fill_in 'post[content]', with: 'test'
+        click_on '投稿する'
+        expect(page).to have_content '投稿を作成しました!'
+        within '.cards' do
+          expect(page).to have_content 'test'
+        end
+      end
+
+      it 'postの文字数が50の場合' do
+        click_on '浦和レッズ'
+        click_on '新規投稿する'
+        fill_in 'post[content]', with: 'a' * 50
+        click_on '投稿する'
+        expect(page).to have_content '投稿することができませんでした。'
+      end
+
+      it 'postの文字数が0の場合' do
+        click_on '浦和レッズ'
+        click_on '新規投稿する'
+        fill_in 'post[content]', with: ''
+        click_on '投稿する'
+        expect(page).to have_content '投稿することができませんでした。'
+      end
+    end
+
+    context 'postの削除' do
+      before do
+        @post = create(:post)
+      end
+
+      it '自分が作成したpostのみ削除できる' do
+        click_on 'Login'
+        fill_in 'user[email]', with: @post.user.email
+        fill_in 'user[password]', with: @post.user.password
+        click_on 'Log in'
+        click_on '大分トリニータ'
+        click_on 'Hello'
+        click_on '掲示板を削除する'
+        expect(page).to have_content '投稿を削除しました'
+      end
+
+      it '自分以外が作成したpostは削除できない' do
+        visit user_session_path
+        click_on 'ゲストログイン'
+        click_on '大分トリニータ'
+        click_on 'Hello'
+        expect(page).not_to have_content '掲示板を削除する'
       end
     end
 
