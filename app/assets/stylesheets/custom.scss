@@ -2,10 +2,6 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-$pc: 1024px; // PC
-$tab: 680px; // タブレット
-$sp: 480px;  // スマホ
-
 body {
   display: flex;
   flex-direction: column;
@@ -29,6 +25,12 @@ p {
   margin: 0 auto;
   padding-bottom: 5px;
   width: 170px;
+}
+
+#logo {
+  color: white;
+  text-decoration: none;
+  font-family: 'Lora', serif;
 }
 // devise
 .loginBox {
@@ -63,6 +65,5 @@ p {
 .teamImg {
   height: 200px;
   width: 280px;
-  // text-align: center;
 }
 }
