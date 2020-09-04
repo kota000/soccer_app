@@ -4,7 +4,7 @@
       <% unless comment.user.image.blank? %>
         <%= image_tag comment.user.image.url, class: "icon_image" %>
       <% else %>
-        <%= image_tag ("nouser.jpeg"), class: "icon_image" %>
+        <%= image_tag ("noimage.png"), class: "icon_image" %>
       <% end %>
       <%= i+1 %>.<%= comment.user.username %>:<span class="time"><%= comment[:created_at].to_s(:datetime_jp) %></span>
       <p class="comment_content"><%= comment.content %></p><hr>
