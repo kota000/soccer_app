@@ -10,6 +10,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
+/docker/*
 !/log/.keep
 !/tmp/.keep
 
@@ -25,3 +26,8 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+.env
+.vscode
+/spec/examples.txt
+.DS_Store
+yarn.lock
