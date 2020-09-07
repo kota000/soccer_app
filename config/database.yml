@@ -16,7 +16,8 @@ default: &default
   username: root
   password: password # docker-compose.ymlのMYSQL_ROOT_PASSWORD
   host: db # docker-compose.ymlのservice名
-
+  socket: /tmp/mysql.sock
+  
 development:
   <<: *default
   database: app_name_development
