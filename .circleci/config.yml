@@ -70,12 +70,5 @@ jobs:
 
       # run rubocop
       - run:
-        name: rubocop
-        command: |
-          mkdir /tmp/test-results
-
-          bundle exec rspec  \
-            --format progress \
-            --format RspecJunitFormatter \
-            --out /tmp/test-results/rubocop.xml \
-            spec/lint/rubocop_spec.rb
+          name: rubocop
+          command: docker-compose run web bundle exec rubocop
