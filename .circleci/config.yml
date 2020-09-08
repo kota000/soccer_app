@@ -70,6 +70,4 @@ jobs:
 
       # run rubocop
 
-      - run:
-          name: Rubocop
-          command: bundle exec rubocop --parallel
+      - run: bundle exec rubocop
