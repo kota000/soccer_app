@@ -52,6 +52,12 @@ jobs:
       - run: bundle exec rake db:create
       - run: bundle exec rake db:schema:load
 
+      # run rubocop
+      - run:
+          name: run rubocop
+          command: |
+            bundle exec rubocop
+
       # RSpec
       - run:
           name: run rspec
@@ -67,9 +73,3 @@ jobs:
       - store_artifacts:
           path: /tmp/test-results
           destination: test-results
-
-      # run rubocop
-      - run:
-          name: run rubocop
-          command: |
-            bundle exec rubocop
