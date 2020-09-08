@@ -70,5 +70,12 @@ jobs:
 
       # run rubocop
       - run:
-          name: run rubocop
-          command: bundle exec rubocop
+        name: rubocop
+        command: |
+          mkdir /tmp/test-results
+
+          bundle exec rspec  \
+            --format progress \
+            --format RspecJunitFormatter \
+            --out /tmp/test-results/rubocop.xml \
+            spec/lint/rubocop_spec.rb
