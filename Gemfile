@@ -21,7 +21,6 @@ gem 'dotenv-rails'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'rubocop-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.1.1'
@@ -46,6 +45,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'rubocop-airbnb'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'byebug', platforms: %i(mri mingw x64_mingw)
@@ -53,7 +53,6 @@ end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'rubocop-airbnb'
   gem 'web-console', '>= 3.3.0'
   # gem 'capybara', '>= 2.15'
   # gem 'selenium-webdriver'
