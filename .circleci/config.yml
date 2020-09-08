@@ -69,6 +69,7 @@ jobs:
           destination: test-results
 
       # run rubocop
-      # - run:
-      #     name: rubocop
-      #     command: bundle exec rubocop 
+      - run:
+          name: run rubocop
+          command: |
+            bundle exec rubocop
