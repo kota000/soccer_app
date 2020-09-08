@@ -71,4 +71,4 @@ jobs:
       # run rubocop
       - run:
           name: rubocop
-          command: docker-compose run web bundle exec rubocop
+          command: bundle exec rubocop 
