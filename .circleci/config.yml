@@ -64,8 +64,8 @@ jobs:
           path: /tmp/test-results
           destination: test-results
 
-      # run rubocop
-      # - run:
-      #     name: run rubocop
-      #     command: |
-      #       bundle exec rubocop -a
+      run rubocop
+      - run:
+          name: run rubocop
+          command: |
+            bundle exec rubocop -a
