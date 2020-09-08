@@ -69,11 +69,7 @@ jobs:
           destination: test-results
 
       # run rubocop
-  rubocop:
-    executor: ruby
-    steps:
-      - attach_workspace:
-          at: ~/
+
       - run:
           name: Rubocop
           command: bundle exec rubocop --parallel
