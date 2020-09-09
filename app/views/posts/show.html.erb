@@ -12,9 +12,9 @@
         </div>
       </div>
       <div class="text-right">
-      <% if user_signed_in? && @post.user.id == current_user.id %>
-        <p><%= link_to "掲示板を削除する", @post, data: { confirm: "Are you sure?" }, method: :delete %></p>
-      <% end %>
+        <% if user_signed_in? && @post.user.id == current_user.id %>
+          <p><%= link_to "掲示板を削除する", @post, data: { confirm: "Are you sure?" }, method: :delete %></p>
+        <% end %>
       </div>
     </div>
   </div>

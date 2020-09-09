@@ -26,6 +26,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/db/seeds.rb
 .env
 .vscode
 /spec/examples.txt
