@@ -1,8 +1,9 @@
-test:
+test: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
   username: 'root'
+  password: 'password'
   port: 3306
   host: '127.0.0.1'
-  database: soccer_app_test #database.ymlのテスト環境のデータベース名を参照
+  database: test_ci
