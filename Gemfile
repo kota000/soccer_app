@@ -33,6 +33,8 @@ gem 'mini_magick'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap4'
 gem 'font-awesome-sass', '~> 5.8.1'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
