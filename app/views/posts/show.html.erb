@@ -1,0 +1,21 @@
+<div class="blue">
+  <h2 class="page_title">コメント一覧</h2>
+  <div class="container">
+    <div class="offset-1 col-10">
+      <div class="comment_box">
+        <div class="comment">
+          <p><%= image_tag @post.image.url, class: "post_img" if @post.image?%></p>
+          <h3><%= @post.content %></h3><hr>
+          <%= render "shared/comments", comments: @comments %>
+          <div class="pagenate"><%= will_paginate @comments %></div>
+          <%= render "shared/comment_form", post: @post, comment: @comment %>
+        </div>
+      </div>
+      <div class="text-right">
+      <% if user_signed_in? && @post.user.id == current_user.id %>
+        <p><%= link_to "掲示板を削除する", @post, data: { confirm: "Are you sure?" }, method: :delete %></p>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

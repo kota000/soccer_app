@@ -1,0 +1,21 @@
+<div class="backimg">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 loginBox">
+      <h2 class="text-center">パスワード再発行</h2>
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+        <p class="text_small">ログインするためのパスワードを忘れた場合、以下のフォームにご登録頂いていたメールアドレスを入力してください。<br/>
+すぐにパスワードのご案内メールを送信いたします。</p>
+        <div class="field">
+          <%= f.label :email %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div><br/>
+
+        <div class="actions">
+          <%= f.submit "メールを送信する" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render "devise/shared/links" %>

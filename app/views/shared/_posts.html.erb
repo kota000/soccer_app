@@ -1,0 +1,17 @@
+<div class="row text-center">
+  <% current_page_posts.first(MAX_POSTS_COUNT).each do |post| %>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <div class="cards">
+        <div class="post_time"><%= time_ago_in_words(post.created_at) %>前</div>
+        <%= link_to post do %>
+          <% if post.image? %>
+            <%= image_tag post.image.url, class: "teamImg" %>
+          <% else %>
+            <%= image_tag ("#{post.teamname}.jpg"), class: "teamImg" %>
+          <% end %>
+            <p class="content"><%= post.content.truncate(26) %></p>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

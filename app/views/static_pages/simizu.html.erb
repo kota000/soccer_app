@@ -1,0 +1,11 @@
+<% provide(:title, "清水エスパルス") %>
+
+<div class="blue">
+  <h1 class="page_title">清水エスパルス</h1>
+  <div class="container">
+    <div class="create_btn">
+      <%= render "create_post" %>
+    </div>
+    <%= render "shared/posts", current_page_posts: @current_page_posts %>
+  </div>
+</div>

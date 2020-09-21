@@ -1,0 +1,73 @@
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+p {
+  font-size: 1.1em;
+  color: black;
+}
+
+.text_small {
+  font-size: 12px;
+}
+
+.flash {
+  padding: 10px;
+}
+
+.pagenate {
+  margin: 0 auto;
+  padding-bottom: 5px;
+  width: 170px;
+}
+
+#logo {
+  color: white;
+  text-decoration: none;
+  font-family: 'Lora', serif;
+}
+// devise
+.loginBox {
+  border: 1px #ccc solid;
+  box-shadow: 0 2px 3px 0 #ddd;
+  padding: 30px;
+  margin-top: 70px;
+  background: #ddd;
+}
+
+.edit_box {
+  border: 1px #ccc solid;
+  box-shadow: 0 2px 3px 0 #ddd;
+  padding: 30px;
+  margin-top: 70px;
+  background: white;
+}
+
+.backimg {
+  background: image-url('background.jpg');
+  background-size: cover;
+  background-blend-mode: lighten;
+  height: 1000px;
+}
+
+.teamImg {
+  height: 160px;
+  width: 180px;
+}
+
+@media (max-width: 575.98px) {
+.teamImg {
+  height: 200px;
+  width: 280px;
+}
+}
