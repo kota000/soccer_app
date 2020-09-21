@@ -6,10 +6,10 @@
     <title><%= full_title(yield(:title)) %> </title>
   </head>
   <body>
-    <%= render "layouts/header" %>
-    <%= render "layouts/alert" %>
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/alert' %>
     <%= yield %>
-    <%= render "layouts/footer" %>
+    <%= render 'layouts/footer' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
