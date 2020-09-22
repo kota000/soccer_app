@@ -1,5 +1,9 @@
 current directory: /Users/kota/Library/Mobile Documents/com~apple~CloudDocs/soccer_app/vendor/bundle/ruby/2.6.0/gems/msgpack-1.3.3/ext/msgpack
+<<<<<<< HEAD
 /Users/kota/.rbenv/versions/2.6.6/bin/ruby -I /Users/kota/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20200921-55936-cmm460.rb extconf.rb
+=======
+/Users/kota/.rbenv/versions/2.6.6/bin/ruby -I /Users/kota/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20200922-73160-1lxqme4.rb extconf.rb
+>>>>>>> 7065a248d2374c7cf2891ddd578caacc42327d3c
 checking for ruby/st.h... yes
 checking for st.h... yes
 checking for rb_str_replace() in ruby.h... yes
@@ -39,4 +43,8 @@ linking shared-object msgpack/msgpack.bundle
 
 current directory: /Users/kota/Library/Mobile Documents/com~apple~CloudDocs/soccer_app/vendor/bundle/ruby/2.6.0/gems/msgpack-1.3.3/ext/msgpack
 make "DESTDIR=" install
+<<<<<<< HEAD
 /usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20200921-55936-1akyg1a/msgpack
+=======
+/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20200922-73160-dpjexy/msgpack
+>>>>>>> 7065a248d2374c7cf2891ddd578caacc42327d3c

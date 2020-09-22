@@ -1,5 +1,9 @@
 current directory: /Users/kota/Library/Mobile Documents/com~apple~CloudDocs/soccer_app/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.10/ext/nokogiri
+<<<<<<< HEAD
 /Users/kota/.rbenv/versions/2.6.6/bin/ruby -I /Users/kota/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20200921-55936-19ld4ec.rb extconf.rb --use-system-libraries
+=======
+/Users/kota/.rbenv/versions/2.6.6/bin/ruby -I /Users/kota/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20200922-73160-zml9dz.rb extconf.rb --use-system-libraries
+>>>>>>> 7065a248d2374c7cf2891ddd578caacc42327d3c
 checking if the C compiler accepts  -I /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libxml2... yes
 checking if the C compiler accepts -Wno-error=unused-command-line-argument-hard-error-in-future... no
 Building nokogiri using system libraries.
@@ -109,4 +113,8 @@ rm -rf /Users/kota/Library/Mobile Documents/com~apple~CloudDocs/soccer_app/vendo
 
 current directory: /Users/kota/Library/Mobile Documents/com~apple~CloudDocs/soccer_app/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.10/ext/nokogiri
 make "DESTDIR=" install
+<<<<<<< HEAD
 /usr/bin/install -c -m 0755 nokogiri.bundle ./.gem.20200921-55936-14g45jj/nokogiri
+=======
+/usr/bin/install -c -m 0755 nokogiri.bundle ./.gem.20200922-73160-wdipbq/nokogiri
+>>>>>>> 7065a248d2374c7cf2891ddd578caacc42327d3c

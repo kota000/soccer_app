@@ -1,5 +1,9 @@
 current directory: /Users/kota/Library/Mobile Documents/com~apple~CloudDocs/soccer_app/vendor/bundle/ruby/2.6.0/gems/jaro_winkler-1.5.4/ext/jaro_winkler
+<<<<<<< HEAD
 /Users/kota/.rbenv/versions/2.6.6/bin/ruby -I /Users/kota/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20200921-55936-1u41w9b.rb extconf.rb
+=======
+/Users/kota/.rbenv/versions/2.6.6/bin/ruby -I /Users/kota/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20200922-73160-uxufd1.rb extconf.rb
+>>>>>>> 7065a248d2374c7cf2891ddd578caacc42327d3c
 creating Makefile
 
 current directory: /Users/kota/Library/Mobile Documents/com~apple~CloudDocs/soccer_app/vendor/bundle/ruby/2.6.0/gems/jaro_winkler-1.5.4/ext/jaro_winkler
@@ -15,4 +19,8 @@ linking shared-object jaro_winkler/jaro_winkler_ext.bundle
 
 current directory: /Users/kota/Library/Mobile Documents/com~apple~CloudDocs/soccer_app/vendor/bundle/ruby/2.6.0/gems/jaro_winkler-1.5.4/ext/jaro_winkler
 make "DESTDIR=" install
+<<<<<<< HEAD
 /usr/bin/install -c -m 0755 jaro_winkler_ext.bundle ./.gem.20200921-55936-1wdzr8x/jaro_winkler
+=======
+/usr/bin/install -c -m 0755 jaro_winkler_ext.bundle ./.gem.20200922-73160-bo7zqc/jaro_winkler
+>>>>>>> 7065a248d2374c7cf2891ddd578caacc42327d3c
