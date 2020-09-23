@@ -1,3 +1,6 @@
 $("textfield").val("");
 $("input").val("");
 $(".comment_card").html("<%= escape_javascript(render 'shared/comments', comments: @comments) %>")
+<% flash.each do |key, value| %>
+  $("#flash").html('<div class="flash alert-<%= bootstrap_alert(key)%> close-flash"><%= value %></div>')
+<% end %>
