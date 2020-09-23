@@ -6,7 +6,9 @@
         <div class="comment">
           <p><%= image_tag @post.image.url, class: "post_img" if @post.image?%></p>
           <h3><%= @post.content %></h3><hr>
-          <%= render "shared/comments", comments: @comments %>
+          <div class="comment_card">
+            <%= render "shared/comments", comments: @comments %>
+          </div>
           <div class="pagenate"><%= will_paginate @comments %></div>
           <%= render "shared/comment_form", post: @post, comment: @comment %>
         </div>

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def create
-    @post = current_user.posts.build(post_params)
+    @post = current_user.posts.create(post_params)
     if @post.save
       redirect_to request.referrer, notice: '投稿を作成しました!'
     else
