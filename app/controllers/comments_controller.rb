@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.js { flash[:notice] = 'コメントを作成しました。' }
+        format.js { flash[:notice] = 'コメントを投稿しました。' }
       else
         format.js { flash[:notice] = 'コメントを作成できませんでした。' }
       end
