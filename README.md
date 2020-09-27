@@ -57,4 +57,5 @@ http://www.soccerfun.site
 * GitHub
 * CircleCI
 * rubocop_airbnb
-
+* Ajax
+* Google認証
