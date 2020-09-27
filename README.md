@@ -14,12 +14,12 @@ http://www.soccerfun.site
  初めてアプリを利用する人でも見てすぐに使えるようできるだきシンプルに作成しました。
 # 使用技術
 
-## バックエンド
+### バックエンド
 
 * Ruby　2.6.6
 * Ruby on Rails　5.2.4
 
-## フロントエンド
+### フロントエンド
 
 ＊ HTML
 ＊ scss
@@ -27,16 +27,16 @@ http://www.soccerfun.site
 ＊ JavaScript
 ＊ jQuery
 
-## テスト
+### テスト
 
 ＊ rspec
 
-## インフラ・開発環境等
+### インフラ・開発環境等
 
 【開発環境】
 
-* Docker
-* Docker-Compose
+＊ Docker
+＊ Docker-Compose
 
 【本番環境】
 
