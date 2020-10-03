@@ -31,3 +31,9 @@
 /spec/examples.txt
 .DS_Store
 yarn.lock
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
