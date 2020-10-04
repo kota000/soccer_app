@@ -3,6 +3,9 @@
 class StaticPagesController < ApplicationController
   before_action :create_post, except: [:home]
 
+  def vote
+    
+  end
   def home
   end
 

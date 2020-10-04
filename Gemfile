@@ -35,6 +35,8 @@ gem 'will_paginate-bootstrap4'
 gem 'font-awesome-sass', '~> 5.8.1'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
+gem 'webpacker'
+gem "chartkick"
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
