@@ -1,0 +1,14 @@
+<h1>優勝するチームを予想しよう！！</h1>
+<% if user_signed_in? && @have_team.nil?%>
+  <%= form_for @question do |f| %>
+    <div class="field">
+      <%= f.text_area :team, class: "text_area", placeholder: "Up to 40 characters..." %>
+    </div>
+    <%= f.submit "投稿する", class: "btn btn-primary" %>
+  <% end %>
+<% else %>
+  <h2>ログインをしてください</h2>
+  <%= button_to "ログイン", new_user_session_path, class: "btn btn-success" %>
+<% end %>
+  <%#= current_user.questions.first.team.nil? %>
+

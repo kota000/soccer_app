@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  # get 'questions/new'
   root 'static_pages#home'
   get '/kawasaki',   to: 'static_pages#kawasaki'
   get '/goosaka',    to: 'static_pages#goosaka'
@@ -35,6 +36,7 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
 
+  resources :questions
   resources :users, only: [:show, :index, :destroy]
   resources :posts do
     resources :comments, only: [:create]
