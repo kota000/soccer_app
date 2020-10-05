@@ -75,7 +75,7 @@ RSpec.describe 'posts', type: :feature do
       end
 
       it '自分が作成したpostのみ削除できる' do
-        click_on 'Login'
+        click_on 'ログイン'
         fill_in 'user[email]', with: @post.user.email
         fill_in 'user[password]', with: @post.user.password
         click_on 'Log in'

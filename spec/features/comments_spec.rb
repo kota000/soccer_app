@@ -9,7 +9,7 @@ RSpec.describe 'comments', type: :feature do
 
     context 'コメント画面表示' do
       it 'ログインをしているとき' do
-        click_on 'Login'
+        click_on 'ログイン'
         click_on 'ゲストログイン'
         expect(current_path).to eq root_path
         click_on '大分トリニータ'

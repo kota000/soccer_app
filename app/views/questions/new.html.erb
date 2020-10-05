@@ -4,11 +4,10 @@
     <div class="field">
       <%= f.text_area :team, class: "text_area", placeholder: "Up to 40 characters..." %>
     </div>
-    <%= f.submit "投稿する", class: "btn btn-primary" %>
+    <%= f.submit "投票する", class: "btn btn-primary" %>
   <% end %>
 <% else %>
   <h2>ログインをしてください</h2>
   <%= button_to "ログイン", new_user_session_path, class: "btn btn-success" %>
 <% end %>
-  <%#= current_user.questions.first.team.nil? %>
 
