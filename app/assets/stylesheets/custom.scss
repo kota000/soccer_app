@@ -8,6 +8,12 @@ body {
   min-height: 100vh;
 }
 
+.box {
+  flex: 1 1 100%;
+  background-color: aquamarine;
+  overflow-y: scroll;
+}
+
 footer {
   margin-top: auto;
 }

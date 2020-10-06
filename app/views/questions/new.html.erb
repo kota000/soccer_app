@@ -1,3 +1,4 @@
+<div class="aaa">
 <h1>優勝するチームを予想しよう！！</h1>
 <% if user_signed_in? && @have_team.nil?%>
   <%= form_for @question do |f| %>
@@ -10,4 +11,4 @@
   <h2>ログインをしてください</h2>
   <%= button_to "ログイン", new_user_session_path, class: "btn btn-success" %>
 <% end %>
-
+</div>
