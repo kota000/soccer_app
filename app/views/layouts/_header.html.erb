@@ -1,6 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <h2><%= link_to "SOCCER FUN", root_path, id: "logo" %></h2>
+    <h2>
+      <%= link_to root_path, id: "logo" do %>
+        S<span><i class="far fa-futbol"></i></span>CCER FUN
+      <% end %>
+    </h2>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

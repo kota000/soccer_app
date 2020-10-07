@@ -1,12 +1,38 @@
 <div class="center">
-<h1 class="page_title">優勝するチームを予想しよう！！</h1>
-<%# if user_signed_in? && @have_team.nil?%>
-  <%= form_for @question do |f| %>
-    <p>〜2020年優勝すると思うチームを選択してください。〜</p>
-    <div class="field canter">
-      <%= f.select :team, ['横浜FM', 'FC東京', '鹿島アントラーズ', '川崎フロンターレ', 'セレッソ大阪', '広島', 'ガンバ大阪', '神戸', '大分', '札幌', '仙台', '清水', '名古屋', '浦和レッズ', 'サガン鳥栖', '湘南', '柏レイソル', '横浜FC'], {include_blank: '選択ボックス'},class: 'sample' %>
-    </div>
-    <div class="pt-2"><%= f.submit "投票する", class: "btn btn-primary" %></div>
+  <h1 class="page_title">優勝するチームを予想しよう！</h1>
+  <% if user_signed_in? && current_user.questions.first.nil? %>
+    <%= form_for @question do |f| %>
+      <p>〜2020年優勝すると思うチームを選択してください。〜</p>
+      <div class="field canter">
+        <%= f.select :team, ['横浜FM', 'FC東京', '鹿島アントラーズ', '川崎フロンターレ', 'セレッソ大阪', '広島', 'ガンバ大阪', '神戸', '大分', '札幌', '仙台', '清水', '名古屋', '浦和レッズ', 'サガン鳥栖', '湘南', '柏レイソル', '横浜FC'], {include_blank: 'チームを選択'},class: 'sample' %>
+      </div>
+      <div class="pt-2"><%= f.submit "投票する", class: "btn btn-primary" %></div>
+    <% end %>
   <% end %>
-<%# end %>
+
+  <h2 class="p-2">ランキング順位</h2>
+
+  <div class="container">
+    <h4 class="text-right">総投票数<%= @questions.size %>件</h4>
+    <div class="rank">
+      <table class="table table-hover">
+        <thead>
+          <tr class="table-warning">
+            <th scope="col">順位</th>
+            <th scope="col">チーム名</th>
+            <th scope="col">投票数</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @rank.each_with_index do |rank, i| %>
+            <tr>
+              <th scope="row"><%= i+1 %></th>
+              <td><%= rank[0] %></td>
+              <td><%= rank[1] %></td>
+            <tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

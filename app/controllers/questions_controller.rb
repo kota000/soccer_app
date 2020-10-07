@@ -1,11 +1,8 @@
 class QuestionsController < ApplicationController
-  def index
-    @questions = Question.all
-  end
-
   def new
     @question = Question.new
-    @have_team = current_user.questions.first.team if user_signed_in?
+    @questions = Question.all
+    @rank = Question.team_rank
   end
 
   def create
