@@ -78,7 +78,7 @@ RSpec.describe 'posts', type: :feature do
         click_on 'ログイン'
         fill_in 'user[email]', with: @post.user.email
         fill_in 'user[password]', with: @post.user.password
-        click_on 'Log in'
+        click_on 'Login'
         click_on '大分トリニータ'
         click_on 'Hello'
         click_on '掲示板を削除する'

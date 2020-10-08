@@ -27,7 +27,7 @@ RSpec.describe 'users', type: :feature do
         click_on 'ログイン'
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on 'Log in'
+        click_on 'Login'
       end
 
       it 'ログアウトする' do
@@ -62,7 +62,7 @@ RSpec.describe 'users', type: :feature do
         click_on 'ログイン'
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on 'Log in'
+        click_on 'Login'
       end
 
       it 'user一覧・詳細ページは開けない' do

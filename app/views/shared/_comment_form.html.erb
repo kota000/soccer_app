@@ -2,8 +2,10 @@
   <%= form_for [post, comment], remote: true do |f| %>
     <%= f.text_field :content %>
     <%= f.submit 'コメントする' %>
+    <%= render 'shared/twitter' %>
+    <%= render 'shared/facebook' %>
   <% end %>
 <% else %>
   <p>ログインをしてください</p>
-  <%= button_to "ログイン", new_user_session_path, class: "btn btn-success" %>
+  <%= button_to 'ログイン', new_user_session_path, class: 'btn btn-success' %>
 <% end %>

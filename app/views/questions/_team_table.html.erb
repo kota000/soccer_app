@@ -1,0 +1,24 @@
+<h2 class="p-3"><i class="fas fa-crown"></i>ランキング順位</h2>
+<div class="container">
+  <h4 class="text-right">総投票数:<%= @questions.size %>件</h4>
+  <div class="rank">
+    <table class="table table-hover">
+      <thead>
+        <tr class="table-warning">
+          <th scope="col">順位</th>
+          <th scope="col">チーム名</th>
+          <th scope="col">投票数</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% rank.each_with_index do |rank, i| %>
+          <tr>
+            <th scope="row"><%= ONE + i %></th>
+            <td><%= rank[0] %></td>
+            <td><%= rank[1] %></td>
+          <tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
