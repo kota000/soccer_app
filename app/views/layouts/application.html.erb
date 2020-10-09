@@ -4,12 +4,13 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <title><%= full_title(yield(:title)) %> </title>
-
   </head>
   <body>
     <%= render 'layouts/header' %>
     <%= render 'layouts/alert' %>
+    <div class="box">
     <%= yield %>
+    </div>
     <%= render 'layouts/footer' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>

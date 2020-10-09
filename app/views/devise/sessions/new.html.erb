@@ -4,12 +4,12 @@
       <h2 class="text-center">Log in</h2>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field">
-          <%= f.label :email %><br />
+          <%= f.label :email %><i class="pl-1 far fa-envelope"></i><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email" ,class: 'form-control'%>
         </div>
 
         <div class="field">
-          <%= f.label :password %><br />
+          <%= f.label :password %><i class="pl-1 fas fa-lock"></i><br />
           <%= f.password_field :password, autocomplete: "current-password" ,class: 'form-control' %>
         </div>
 
@@ -22,7 +22,10 @@
 
         <div class="actions">
           <br>
-          <%= f.submit "Log in" ,class: "btn btn-block btn-primary"%>
+          <%#= f.submit "Login", class: "btn btn-block btn-primary" %>
+          <%= f.button :type => "submit", class: "btn btn-block btn-primary" do %>
+          Login<i class="pl-2 fas fa-sign-in-alt"></i>
+        <% end %>
         </div>
       <% end %>
       <div class="guest_btn">

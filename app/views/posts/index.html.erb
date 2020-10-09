@@ -9,7 +9,7 @@
         <%= submit_tag 'search', :name => nil, class: "btn-success" %>
       <% end %>
     </div>
-    <h4 class="text-right"><%= @posts.count %>件</h4>
+    <h4 class="text-right"><%= @posts.size %>件</h4>
     <div class="row text-center">
       <% @posts.each_with_index do |post, i| %>
         <div class="col-lg-3 col-md-4 col-sm-6">

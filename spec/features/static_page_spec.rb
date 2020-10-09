@@ -15,7 +15,7 @@ RSpec.describe 'static_page', type: :feature do
     it '表示確認' do
       expect(page).to have_content '川崎フロンターレ'
       expect(page).to have_content 'ヴィッセル神戸'
-      expect(page).to have_content 'Login'
+      expect(page).to have_content 'ログイン'
       expect(page).to have_content '大分トリニータ'
       expect(page).to have_content '湘南ベルマーレ'
     end

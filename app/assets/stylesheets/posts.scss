@@ -1,14 +1,11 @@
-.content {
-  font-size: 15px;
-  text-align: center;
-}
-
 .page_title {
   text-align: center;
   padding: 10px;
   font-family: 'Slabo 27px', serif;
   background-color: paleturquoise;
   margin-bottom: 20px;
+  border-bottom: 3px solid #000;
+  letter-spacing: 15px;
 }
 
 .search {
@@ -25,4 +22,10 @@
   font-size: 10px;
   text-align: center;
   color: blueviolet;
+}
+
+@media (max-width: 575.98px) {
+.page_title {
+  font-size: 25px;
+}
 }

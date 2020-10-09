@@ -9,14 +9,14 @@ RSpec.describe 'users', type: :feature do
     context 'userを作成する' do
       it 'home画面からuserを作成する' do
         expect(User.count).to eq 0
-        click_on 'Login'
+        click_on 'ログイン'
         click_on 'Sign up'
         fill_in 'user[username]', with: 'test'
         fill_in 'user[email]', with: 'a@example.com'
         fill_in 'user[password]', with: 'aaaaaa'
         click_on 'Sign up'
         expect(current_path).to eq root_path
-        expect(page).not_to have_content 'Login'
+        expect(page).not_to have_content 'ログイン'
         expect(User.count).to eq 1
       end
     end
@@ -24,21 +24,21 @@ RSpec.describe 'users', type: :feature do
     context 'ログインをしたあとのUser機能' do
       before do
         @user = create(:user)
-        click_on 'Login'
+        click_on 'ログイン'
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on 'Log in'
+        click_on 'Login'
       end
 
       it 'ログアウトする' do
         expect(page).to have_content @user.username
-        click_on 'Logout'
+        click_on 'ログアウト'
         expect(page).not_to have_content @user.username
       end
 
       it '名前を編集する' do
         expect(page).to have_content 'test_user'
-        click_on 'Edit'
+        click_on '編集'
         fill_in 'user[username]', with: 'hoge'
         click_on 'Update'
         expect(current_path).to eq root_path
@@ -48,21 +48,21 @@ RSpec.describe 'users', type: :feature do
 
       it 'アカウントを削除する' do
         expect(User.count).to eq 1
-        click_on 'Edit'
+        click_on '編集'
         click_on 'Cancel my account'
         expect(User.count).to eq 0
         expect(current_path).to eq root_path
-        expect(page).to have_content 'Login'
+        expect(page).to have_content 'ログイン'
       end
     end
 
     context '管理者アカウントではないとできない' do
       before do
         @user = create(:user)
-        click_on 'Login'
+        click_on 'ログイン'
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on 'Log in'
+        click_on 'Login'
       end
 
       it 'user一覧・詳細ページは開けない' do

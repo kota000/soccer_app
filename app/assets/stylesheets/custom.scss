@@ -8,6 +8,16 @@ body {
   min-height: 100vh;
 }
 
+.box {
+  flex: 1 1 100%;
+  background-color: aquamarine;
+  overflow-y: scroll;
+}
+
+.center {
+  text-align: center;
+}
+
 footer {
   margin-top: auto;
 }
@@ -53,16 +63,21 @@ p {
   background: white;
 }
 
-.backimg {
-  background: image-url('background.jpg');
-  background-size: cover;
-  background-blend-mode: lighten;
-  height: 1000px;
-}
-
 .teamImg {
   height: 160px;
   width: 180px;
+  border-radius: 10px;
+  // display: block;
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+  // transition:1s all;
+    &:hover {
+    transform: scale(1.1);	/*画像の拡大率*/
+    transition-duration: 0.3s;	/*変化に掛かる時間*/
+    }
+}
+
+.fa-futbol {
+  color: #ccc;
 }
 
 @media (max-width: 575.98px) {
