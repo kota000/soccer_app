@@ -22,7 +22,10 @@
 
         <div class="actions">
           <br>
-          <%= f.submit "Login", class: "btn btn-block btn-primary" %>
+          <%#= f.submit "Login", class: "btn btn-block btn-primary" %>
+          <%= f.button :type => "submit", class: "btn btn-block btn-primary" do %>
+          Login<i class="pl-2 fas fa-sign-in-alt"></i>
+        <% end %>
         </div>
       <% end %>
       <div class="guest_btn">
