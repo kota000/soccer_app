@@ -46,10 +46,10 @@
 
 【本番環境】
 
-* AWS(EC2, RDS for MySQL, S3, Route53, ALB, ACM)
+* AWS(EC2, RDS for MySQL, Route53, ALB, ACM)
 * Nginx
 * Puma
-
+* Mysql5.7
 
 【その他】
 
