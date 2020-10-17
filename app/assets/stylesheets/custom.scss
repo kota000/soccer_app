@@ -46,7 +46,7 @@ p {
   text-decoration: none;
   font-family: 'Lora', serif;
 }
-// devise
+
 .loginBox {
   border: 1px #ccc solid;
   box-shadow: 0 2px 3px 0 #ddd;
@@ -67,9 +67,7 @@ p {
   height: 160px;
   width: 180px;
   border-radius: 10px;
-  // display: block;
 	transition-duration: 0.3s;	/*変化に掛かる時間*/
-  // transition:1s all;
     &:hover {
     transform: scale(1.1);	/*画像の拡大率*/
     transition-duration: 0.3s;	/*変化に掛かる時間*/
