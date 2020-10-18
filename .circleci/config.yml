@@ -25,14 +25,6 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      # - run:
-      #     name: setup bundler
-      #     command: |
-      #       sudo gem update --system
-      #       sudo gem uninstall bundler
-      #       sudo rm /usr/local/bin/bundle
-      #       sudo gem install bundler
-
       - run:
           name: install dependencies
           command: |
@@ -47,12 +39,11 @@ jobs:
           name: Wait for DB
           command: dockerize -wait tcp://127.0.0.1:3306 -timeout 120s
 
-      - run:
-          name: bundle exec
-          command: |
-            dockerize -wait tcp://127.0.0.1:3306 -timeout 120s
-            bundle exec rake db:create
-            bundle exec rake db:schema:load
+      # Database setup
+      - run: mv config/database.yml.ci config/database.yml
+      - run: bundle exec rake db:create
+      # - run: bundle exec rake db:create RAILE_ENV=development
+      - run: bundle exec rake db:schema:load
 
       # RSpec
       - run:
