@@ -29,7 +29,6 @@ jobs:
           name: install dependencies
           command: |
             bundle install --jobs=4 --retry=3 --path vendor/bundle
-
       - save_cache:
           paths:
             - ./vendor/bundle
@@ -39,11 +38,10 @@ jobs:
           name: Wait for DB
           command: dockerize -wait tcp://127.0.0.1:3306 -timeout 120s
 
-      - run:
-          name: データベースのセットアップ
-          command: |
-            bundle exec rake db:create
-            bundle exec rake db:structure:load
+      # Database setup
+      - run: mv config/database.yml.ci config/database.yml
+      - run: bundle exec rake db:create
+      - run: bundle exec rake db:schema:load
 
       # RSpec
       - run:
@@ -53,11 +51,9 @@ jobs:
                               --out test_results/rspec.xml \
                               --format progress \
                               $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
-
       # collect reports
       - store_test_results:
           path: /tmp/test-results
       - store_artifacts:
           path: /tmp/test-results
           destination: test-results
-
