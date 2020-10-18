@@ -373,7 +373,7 @@ DEPENDENCIES
   rails-i18n (~> 5.1)
   rspec-rails
   rubocop-airbnb
-  sass-rails (= 5.0.6)
+  sass-rails
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
